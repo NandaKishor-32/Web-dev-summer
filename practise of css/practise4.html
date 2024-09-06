@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>practice website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+    background-image: url("../html images/anime-mountains.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-image: linear-gradient(to bottom,rgba(82, 82, 82, 0.164),rgba(0, 0, 0, 0.507));
+    border-image-slice:fill 1;
+   }             
+   #check{
+    z-index: 4;
+    position: absolute;
+    display: none;
+   }    
+   .whole{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* aspect-ratio: 1/1; */
+    /*  height: 220vh;  */
+    /*  background-image: linear-gradient(to bottom,rgba(102, 102, 102, 0.39),rgba(0, 0, 0, 0.322));
+     background-position: center; */
+   /*  background-repeat: no-repeat; */
+    /* background-size: cover; */
+   /*  background-attachment: fixed;  */
+   }
+  
+  header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.315);
+    backdrop-filter: blur(50px);
+    height: 8vh;
+    /* min-width: 50vw; */
+    border-radius: 0px 0px 20px 20px;
+  }
+.logo{
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 100px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+   
+}
+
+a,li{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin-right: 1vw;
+    width: 75px;
+    padding: 5px;
+}
+li:hover{
+    border-radius: 20px;
+    background-color: greenyellow;
+    color: black;
+    height: 25px;
+
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 9vw;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    
+}
+.tag{
+    margin-bottom: 60px;
+}
+.h-1{
+    color: beige;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    font-size: 1.3rem;
+    
+}
+.h-2{
+    color: white;
+    font-size: 4.3rem;
+    text-shadow: 3px 3px black;
+}
+button{
+    width: 120px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid greenyellow;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.322);
+    backdrop-filter: blur(50px);
+    font-weight: 600;
+    font-size: 1rem;
+}
+button:hover{
+    background-color:greenyellow;
+cursor: pointer;
+color: rgb(0, 0, 0);
+
+
+
+}
+ul li:nth-child(4){
+    width: 80px;
+}
+ul li:nth-child(3){
+   
+    width: 50px;
+}
+
+
+.grid-layout{
+    display: grid;
+   grid-template-columns: 1fr;
+    gap: .7rem;
+    grid-auto-rows: 200px;
+    line-height: 1.22;
+    /* width: 85vw; */
+    padding: 10px;
+}
+::selection{
+    background-color: greenyellow;
+    color: black;
+    
+}
+.h-2::selection{
+    
+    text-shadow: 3px 3px rgb(255, 255, 255);
+}
+.h-1::selection{
+    text-shadow: 3px 3px rgb(255, 255, 255);
+}
+
+label{
+    width: 25px;
+    margin: 8px;
+   display: none; 
+   position: relative;  
+  top: 3px;
+    right: 20px; 
+    height: 20px;
+    cursor: pointer;
+
+               
+}
+.cross{
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+.bars{
+    color: white;
+}
+
+
+@media (width<=900px){
+    nav ul{
+        display: none;
+    }
+    header{
+        justify-content: space-between;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+   label{
+        display: block;
+        position: absolute;
+        
+    }
+    label .cross{
+        display: none;
+    }
+    a{
+        color: black;
+        font-weight: 600;
+        
+    }
+    #check:checked ~ header nav ul{
+        display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                position: fixed;
+                width: 100vw;
+                height: 70vh;
+                top: 0;
+                left: 0;
+               /*  right: 0;
+                bottom: 0; */
+               /*  background-color: rgba(154, 216, 60, 0.596); */
+                background-color: rgba(240, 248, 255, 0.719);
+    }
+    #check:checked ~ header label .bars{
+        display: none;
+    }
+    #check:checked ~ header label .cross{
+        display: block;
+        position: absolute;
+        top: 8px;
+        z-index: 5;
+        color: black;
+    }
+
+    
+
+}
+@media (750>width>400px){
+    .grid-layout{
+
+        grid-template-columns: repeat(1,350px);
+        
+        }
+        
+}
+@media (width<400px){
+    .h-1{
+            font-size: 1.6rem;
+        }
+        .h-2{
+            font-size: 3.5rem;
+        }
+}
+@media (width>750px){
+    .grid-layout{
+        grid-template-columns: repeat(4,1fr);
+        width: 70vw;
+    }
+.white-box,.white-box5{
+   
+    grid-column: span 2; 
+}
+.white-box3{
+    grid-row: span 2;
+}
+}
+.grid-layout>*{
+    transition: all 0.6s ;
+    border-radius: 19px;
+    border-top: 1px solid rgba(255, 255, 255, 0.26);
+    border-left: 1px solid rgba(255, 255, 255, 0.219);
+    border-right: 2px solid rgba(255, 255, 255, 0.281);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.26);
+    background-color: rgba(214, 214, 214, 0.274);
+    backdrop-filter: blur(10px);
+    padding: 4px;
+    box-shadow: 2px 2px 2px rgba(161, 161, 161, 0.329), -1px -1px 2px  rgba(161, 161, 161, 0.829);
+    color: rgb(0, 0, 0);
+   
+}
+
+.grid-layout>*:hover{
+   
+    transform: translateY(-6px);
+}
+.pp{
+    display: flex;
+    align-items: center;
+}
+.img{
+    margin-right: 4px;
+    border-radius: 50%;
+    width: 50px;
+}
+.user{
+    font-weight:bold ;
+    margin: 0px 0px 0px 10px;
+}
+   
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <div class="logo">LOGO</div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Info</a>
+                            </li>
+                            <li>
+                                <a href="">Services</a>
+                                </li>
+                                <li>
+                                    <a href="">Contact</a>
+                                    </li>
+                                    </ul>
+                                    </nav>
+                                    <label for="check">
+                                        <svg class="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                                    </svg>
+                                    <?xml version="1.0" encoding="UTF-8"?><svg class="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.021 512.021" style="enable-background:new 0 0 512.021 512.021;" xml:space="preserve" width="512" height="512">
+                                        <g>
+                                            <path fill="currentColor" d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+                                        </g>
+                                        </svg>
+                                    </label>
+                                    </header>
+                                    <div class="whole">
+                                    <div class="main">
+    <div class="tag">
+        <p class="h-1">NATURE'S</p>
+<p class="h-2">WONDERS</p>
+        </div>
+
+<button>Get Started</button>
+
+</div>
+<div class="grid-layout">
+<div class="white-box">
+    <div class="pp">
+
+        <img src="../html images/flag.jpg" class="img">
+    <span class="user">Nik Red</span>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitisLorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitis</p>
+</div>
+<div class="white-box2">
+    <div class="pp">
+
+        <img src="../html images/flag.jpg" class="img">
+    <span class="user">Nik Red</span>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitis</p>
+</div>
+<div class="white-box3">
+    <div class="pp">
+
+        <img src="../html images/flag.jpg" class="img">
+    <span class="user">Nik Red</span>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitisLorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitis</p>
+</div>
+<div class="white-box4">
+    <div class="pp">
+
+        <img src="../html images/flag.jpg" class="img">
+    <span class="user">Nik Red</span>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitis</p>
+</div>
+<div class="white-box5">
+    <div class="pp">
+
+        <img src="../html images/flag.jpg" class="img">
+    <span class="user">Nik Red</span>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitisLorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sunt id aut temporibus debitis</p>
+</div>
+</div>
+</div>
+
+</body>
+</html>

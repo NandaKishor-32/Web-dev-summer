@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile card</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        body{
+            display: flex;
+            /* width: 100vh; */
+            height: 100vh;
+            /* border:2px solid black; */
+            background-color: rgb(1, 11, 20);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            position: relative;
+            width: 250px;
+            height: 400px;
+           /*  top: 250px;
+            bottom: 800px;
+            left: 250px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           padding: 3px 3px 3px 3px;
+            border-radius: 24px;
+            transition: all 0.5s;
+           background-image: -webkit-linear-gradient(45deg,red,purple,blue);
+           background-clip: padding-box;
+        }
+        .card:hover{
+            scale: 1.05;
+            cursor: pointer;
+            box-shadow: 3px 3px 30px rgba(119, 0, 255, 0.5),-3px -3px 30px rgba(187,7,7,0.5);
+            
+        }
+        .imag{
+            position: absolute;
+            
+            left: 35%;
+            bottom: 65%;
+            width: 78px;
+            border-radius: 50px;
+            
+            border: 5px solid white;
+            transition: all 0.5s;
+        }
+        img:hover{
+            scale: 1.15;
+        }
+        .blue{
+            background-color: rgb(81, 127, 255);
+            width: 243px;
+            height: 100px;
+            /* align-self: baseline; */
+            border-radius: 24px 24px 0px 0px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            
+        }
+        .info-box{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            height: 300px;
+            width: 243px;
+            border-radius: 0px 0px 24px 24px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        p{
+            margin: 2px;
+        }
+        img{
+            width: 24px;
+            transition: all 0.4s;
+
+        }
+        .logos{
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+        }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-self: center;
+            height:40px ;
+            width: 100%;
+        }
+        button{
+            height: 25px;
+            color: white;
+            background-color: rgb(81, 127, 255);
+            border: none;
+            width: 65px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+        button:hover{
+            scale:1.02;
+            box-shadow: 3px 3px 0px rgb(50, 93, 211);
+        }
+     
+       
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="imag" src="../html images/flag.jpg" alt="image">
+        <div class="blue"></div>
+        <div class="info-box">
+            <div class="info">
+                <h3>Nik Red</h3>
+                <p>junior programmer</p>
+                <p>languages known:</p>
+                <p>C,Java,html,css</p>
+            </div>
+            <div class="logos"><img src="../icons/twitter.svg" alt="image"> <img src="../icons/facebook.svg" alt="image">
+            <img src="../icons/instagram.svg" alt="image"><img src="../icons/phone-solid.svg" alt="">
+        </div>
+            <div class="btn">
+                <button>follow</button>
+                <button>message</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

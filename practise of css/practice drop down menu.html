@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    header{
+        height: 9vh;
+       
+        background-color: rgb(9, 9, 51);
+        
+    }
+
+nav{
+    height: 9vh;
+   
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    height: 9vh;
+    
+}
+.drop-down{
+    position: absolute;
+    width:200px;
+    height: 300px;
+   
+    top: 50vh;
+    left: 50vw;
+   background-color: red;
+   transition: all 0.9s;
+opacity: 0;
+   
+
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+button{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+button:active + .drop-down{
+    opacity: 1;
+    display: block;
+    transform: translateY(-100px);
+ }
+
+
+
+</style>
+
+</head>
+<body>
+   
+    <header>
+        
+            
+                <div class="nav-bar">
+                        <button class="hme">Home
+                           
+                        </button>
+                        <div class="drop-down">
+                            <p>HOme</p>
+                            <p>HOme</p>
+                            <p>HOme</p>
+                            <p>HOme</p>
+                         </div>
+                    <button>Contact</button>
+                <button>About</abutton>
+                    
+            </div> 
+  
+</header>
+</body>
+</html>

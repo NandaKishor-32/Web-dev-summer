@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(45, 45, 85);
+            padding: 4px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: aliceblue;
+            color: black;
+            align-items: center;
+            height:70px;
+            position: relative;
+        }
+       
+        a{
+            text-decoration: none;
+            color: black;
+            margin-right: 30px;
+        }
+        label{
+            display: none;
+        }
+        .bars{
+            color: green;
+            
+   /*  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+    
+   }
+        #check{
+         
+           
+            display: none;
+        }
+        
+        @media (width<900px){
+            .nav{
+                display: none;
+            }
+            label{
+                display: block;
+                width: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+                height: 25px;
+            }
+            label .bars{
+                position: absolute;
+                width: 20px;
+            }
+
+            label .home{
+                display: none;
+                width: 20px;
+            }
+            #check:checked ~ header .nav{
+                /* z-index: 1; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(240, 248, 255, 0.719);
+            }
+            #check:checked ~ header .nav a{
+                margin: 0;
+            }
+            #check:checked ~ header label .bars{
+                display: none;
+            }
+            #check:checked ~ header label .home{
+                display: block;
+                z-index: 4;
+                position: absolute;
+                
+            }
+           
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+          <header>
+            <div class="logo">LOGO</div>
+           <div class="nav">
+
+               <a href="#">Home</a>
+            <a href="#">About</a>
+        <a href="#">Contact</a>
+    <a href="#">Services</a>
+<a href="#">More</a>
+</div>
+          
+            <label for="check"><img class="bars" src="../icons/bars-solid.svg" alt="img">
+                
+            <img class="home" src="../icons/cross.svg" alt="image">
+            </label>
+          </header>   
+</body>
+</html>

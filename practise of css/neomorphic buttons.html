@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(224, 224, 224);
+        }
+        .three-d-btn{
+            background-color: rgb(224, 224, 224);
+            border-radius: 30px;
+            box-shadow: 7px 7px 15px rgb(190, 190, 190),
+            -7px -7px 15px rgb(255, 255, 255);
+            color: rgb(19, 106, 150);
+            font-size: 0.9rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            padding: 15px 30px;
+            margin: 0px 10px;
+        }
+       
+        .three-d-btn:hover{
+            box-shadow: inset 3px 3px 6px rgb(190, 190, 190),
+            inset -3px -3px 6px rgb(255, 255, 255);
+        }
+        .three-d-btn:active{
+            box-shadow:inset 7px 7px 15px rgb(190, 190, 190),
+            inset -7px -7px 15px rgb(255, 255, 255);
+
+        }
+    </style>
+</head>
+<body>
+    <button class="three-d-btn">Home</button>
+    <button class="three-d-btn">Home</button>
+    <button class="three-d-btn">Home</button>
+    <button class="three-d-btn">Home</button>
+    <button class="three-d-btn">Home</button>
+</body>
+</html>

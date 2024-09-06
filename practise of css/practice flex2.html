@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First website</title>
+    <link rel="stylesheet" href="first-webiste.css">
+    <style>
+        :root{
+    --clr-dark: linear-gradient(to bottom right,#12123a,#440e74,#1c91b4);
+    --clr-white:white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    color: rgb(247, 238, 123);
+}
+
+.imgs{
+    height: 40px;
+}
+.img1{
+    height: 32px;
+}
+.img2{
+    height: 100px;
+}
+.img3{
+    height: 60px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 90%;
+    max-width: 1080px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+
+.card,.card1,.card2,.card3{
+    background-image: var(--clr-dark);
+    border-radius: 12px;
+     flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.card,.card1,.card2,.card3:hover{
+transform: translateY(-5px);
+cursor: pointer;
+}
+.card{
+    min-width: 160px;
+    height: 165px;
+}
+.card2{
+    min-width: 330px;
+    height: 340px;
+}
+.card1{
+   min-width: 330px;
+   height: 80px;
+    
+}
+.card3{
+    min-width: 330px;
+    height: 165px;
+}
+/* .container > div{
+    flex: 1;
+} */
+.c1,.c2,.c3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 330px;
+   flex: 1;
+ 
+ 
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="c1">
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            
+            <div class="card1"><img src="html images/vecteezy_ai-generated-green-leaf-with-water-droplets_41878742.jpeg"  class="img1"></div>
+        </div>
+        <div class="c2">
+            <div class="card2">
+                <img src="html images/vecteezy_summer-seasonal-anime-style-background-landscape-mountain_23856960.jpg" class="img2">
+            </div>
+            <div class="card1"><img src="html images/vecteezy_ai-generated-green-leaf-with-water-droplets_41878742.jpeg"  class="img1"></div>
+        </div>
+        
+        <div class="c3">
+            <div class="card3"><img src="html images/vecteezy_afternoon-sunset-sky-clouds-landscape-red-sunset-in-a_23856990.jpg"  class="img3"></div>
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            <div class="card"><img src="html images/flag.jpg"  class="imgs"></div>
+            <div class="card1"><img src="html images/vecteezy_ai-generated-green-leaf-with-water-droplets_41878742.jpeg"  class="img1"></div>
+        </div>
+        
+        
+    </div>
+
+    
+</body>
+</html>

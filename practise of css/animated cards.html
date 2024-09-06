@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 130vh;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 100svh;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 250px;
+            min-width: 230px;
+            height: 300px;
+           /*  background-color: yellow; */
+            background-image:url('../html\ images/anime like art wallpaper.jpeg');
+            background-position: center;
+            background-size: cover;
+            border-radius: 1.5rem ;
+            box-shadow: 8px 8px 24px rgba(45, 45, 45, 0.479),-4px -4px 10px rgba(49, 48, 48, 0.535);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            margin: 50px 30px;
+           
+        }
+        .card-content{
+            width: 220px;
+            min-width: 200px;
+            height: 130px;
+            background-color: rgb(253, 224, 253);
+            border-radius: 1.5rem ;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 8px 8px 24px rgba(45, 45, 45, 0.479),-4px 0px 10px rgba(49, 48, 48, 0.535);
+            position: absolute;
+            /* top: 77%; */
+            top: 100%;
+            /* transition: all 2.2s; */
+           
+           
+        }
+        .card:hover{
+            animation: removeoverflow 2s forwards;
+        }
+        .card:hover  .card-content{
+           animation: showcard 1s forwards;
+        }
+        @keyframes showcard{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-150px);
+            }
+            100%{
+                transform: translateY(-70px);
+               
+            }
+        }
+        @keyframes removeoverflow{
+            to{
+                overflow:initial;
+            }
+        }
+
+        @media (670px<width<1040px){
+            .container{
+                /* width: 700px; */
+                padding: 20px 100px;
+                display: grid;
+                gap: 1.9rem;
+                grid-template-columns: 1fr 1fr;
+            }
+            .card{
+                margin:30px 20px ;
+            }
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h2>Hello world</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem est. Assumenda 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Hello world</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem est. Assumenda 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Hello world</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem est. Assumenda 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(205, 205, 205);
+        }
+.banner{
+    height: 130vh;
+    overflow: hidden;
+    position: relative;
+}
+.banner .product{
+    /* background-color: red; */
+    width: 500px;
+    aspect-ratio: 1 / 1;
+    /* height: 500px; */
+    position: absolute;
+    bottom: 170px;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7;
+
+}
+.banner .product .soda{
+background:
+url("../html\ images/anime-dragon.jpg"),
+ url("../html\ images/soda-can.png");
+ background-size: auto 100%;
+ width: 280px;
+ aspect-ratio: 2 / 4;
+ background-blend-mode: multiply;
+ mask-image: url("../html\ images/soda-can.png");
+ mask-size: auto 100% 10% 50%;
+}
+    </style>
+
+</head>
+<body>
+    <div class="banner">
+        <div class="product">
+            <div class="soda"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

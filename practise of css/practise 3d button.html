@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+           
+            height: 40px;
+            width: 100px;
+            background-color: rgb(235, 235, 235);
+           margin-right: -2px;
+           position: absolute;
+           top: 8px;
+           left: 8px;
+            border-radius: 20px;
+            border: 0.5px solid rgb(126, 126, 126);
+            cursor: pointer;
+            transition: all 0.26s;
+            overflow: hidden;
+           /*  display: flex;
+            justify-content:space-between; */
+        }
+        .top{
+            height: 40px;
+            width: 100px;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+            font-weight: 600;
+           text-align: center;
+          /*  overflow: hidden; */
+           position: relative;
+        }
+        .top::before{
+            content: "";
+            background-color: rgba(255, 255, 255, 0.808);
+            width: 15px;
+           height: 47px;
+          z-index: 2;
+           transform: skewX(30deg);
+            position: absolute;
+            top: 0px;
+            left:-20px ;
+           overflow: hidden;
+            transition: all .25s ease-in-out;
+        }
+        .btn-body{
+            width: 103px;
+            height: 43px;
+            background-color: rgba(158, 158, 158, 0.952);
+            z-index: -1;
+            position: absolute;
+            top: 16px;
+            left: 7px;
+            border-radius: 20px;
+            border: 3px solid rgb(100, 100, 100);
+            outline: 3px solid rgb(0, 0, 0);
+            overflow: hidden;
+            box-shadow: -1px 1px gray;
+        }
+      button:active {
+            transform: translateY(9px);  
+        }
+        button:active .top::before{
+            transform: skewX(30deg) translateX(110px);
+
+        }
+        .btn-body::before{
+            content: "";
+            height: 14px;
+            width: 2px;
+            background-color: rgba(102, 102, 102, 0.479);
+            position: fixed;
+            z-index: 4;
+            top: 46px;
+            left: 22px;
+        }
+        .btn-body::after{
+            content: "";
+            height: 14px;
+            width: 2px;
+            background-color: rgba(102, 102, 102, 0.404);
+            position:fixed;
+            top: 46px;
+            left: 92px;
+            transition: all 0.3; 
+        }
+    </style>
+</head>
+<body>
+   <button>
+       <div class="top">click</div>
+   </button>
+    <div class="btn-body"></div>
+</body>
+</html>

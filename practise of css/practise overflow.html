@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow practice</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            border: 2px solid ;
+            width: 30vw;
+            height: 15vh;
+            overflow: auto;
+        }
+        .list{
+            display: flex;
+            width: 100vw;
+            overflow: auto;
+
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        
+    .group:hover{
+            cursor: grab;
+        }
+    .group:active{
+            cursor: grabbing;
+        }
+        .grabbable{
+            width: 100px;
+            aspect-ratio: 1/1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Overflow property</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id error in molestias, odio soluta aut fugiat quidem velit quasi. Sed quos, iusto omnis minus provident nemo necessitatibus veniam quidem porro.</p>
+    </div>
+    <div class="list">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        <img class="group" src="../html images/Group Img.jpg" alt="">
+        </div>
+    <img src="../html images/night.jpg" class="grabbable"></img>
+
+</body>
+
+</html>

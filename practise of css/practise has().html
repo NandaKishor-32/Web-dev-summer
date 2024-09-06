@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(21, 12, 39, 0.788);
+            display: flex;
+            align-items: center;
+            size: 100%;
+            /* width: 100%; */
+            height:90vh;
+            justify-content: center;
+            width: 100%;
+        }
+        img{
+            width: 90px;
+            height: 160px;
+        }
+        .list{
+            display: flex;  
+            justify-content: center;
+            width:900px;
+           /*  height: 100%; */
+            transform-style:preserve-3d;
+            transform: perspective(1000px);
+           /*  overflow-x: auto; */
+        }
+       .list .item{
+            margin: 1px;
+            filter: brightness(0);
+            transition: 0.43s;
+        }
+        .list .item:hover{
+            filter: brightness(1);
+            cursor: pointer;
+            transform:translateZ(200px);
+        }
+        .list .item:hover + * {
+            filter: brightness(0.6);
+            transform:translateZ(150px) rotateY(40deg);
+        }
+        .list .item:hover + *  +  * {
+            filter:brightness(0.39);
+            transform:translateZ(70px) rotateY(20deg);
+        }
+        .list .item:hover + *  +  * + *{
+            filter:brightness(0.2);
+            transform:translateZ(30px) rotateY(10deg);
+        }
+        .list .item:has(+ *:hover){
+            filter: brightness(0.6);
+            transform:translateZ(150px) rotateY(-25deg);
+        }
+        .list .item:has(+ * + *:hover){
+            filter:brightness(0.39);
+            transform:translateZ(70px) rotateY(-15deg);
+        }
+        .list .item:has(+ * + * + *:hover){
+            filter:brightness(0.2);
+            transform:translateZ(30px) rotateY(-10deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="list">
+        <img src="../html images/anime landscape.jpeg" class="item">
+        <img src="../html images/anime like art wallpaper.jpeg" class="item">
+        <img src="../html images/anime-evening.jpg" class="item">
+        <img src="../html images/anime landscape.jpeg" class="item">
+        <img src="../html images/anime like art wallpaper.jpeg" class="item">
+        <img src="../html images/anime-evening.jpg" class="item">
+        <img src="../html images/anime landscape.jpeg" class="item">
+        <img src="../html images/anime like art wallpaper.jpeg" class="item">
+        <img src="../html images/anime-evening.jpg" class="item">
+        <img src="../html images/anime landscape.jpeg" class="item">
+    </div>
+    
+</body>
+</html>

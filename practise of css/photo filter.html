@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        background-color: rgb(3, 4, 48);
+    }
+     .image{
+        margin: 200px;
+        width: 600px;
+        height: auto;
+        display: flex;
+        transform-style: preserve-3d;
+        transform:perspective(1000px) ;
+       
+      
+    }
+    img{
+        width: 300px;
+        margin: 2px;
+        border-radius: 10px;
+        transition: all 0.4s;
+    }
+    img:hover{
+        transform: rotate(9deg)
+        translateZ(250px);
+        box-shadow: 5px 5px 25px 10px rgba(3, 3, 255, 0.637),
+        -5px -5px 25px 10px  rgb(150, 10, 10);
+    }
+    .image img:hover + *{
+        filter: brightness(0.5);
+    }
+    img:has(+ *:hover){
+        filter: brightness(0.5);
+    }
+
+    .📷:not(box-shadow){
+        filter: brightness(120%)
+        contrast(90%)
+        saturate(220%)
+        sepia(15%);
+
+    }
+  
+  
+
+   </style>
+</head>
+<body>
+    <div class="image">
+        <img src="../html images/my image.jpg" alt="">
+       
+
+            <img class="📷" src="../html images/my image.jpg" alt="">
+           
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex practise</title>
+    <style>
+        .wrapper{
+            width: 450px;
+            height: 180px;
+            
+            display: flex;
+            flex-direction: row;
+            line-height: 1.5;
+          
+            
+        }
+        p{
+            font-family: Roboto,Arial;
+            margin: 4px;
+            
+        }
+        .image{
+           
+            width: 60px;
+            display: flex;
+            justify-content: space-around;
+           align-items: flex-start;
+          
+        }
+        img
+        {
+            width: 50px;
+            border-radius: 50px;
+            
+        }
+        .info{
+            align-items:center;
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: space-evenly;
+           
+        }
+        
+        .about{
+            width: 380px;
+           
+        }
+        .user{
+            display: inline-block;
+            font-weight: 700;
+        }
+        .tag{
+            display: inline-block;
+            color: grey;
+        }
+        .txt{
+          font-weight: 500;
+          
+        }
+        .link-box{
+            width: 380px;
+           border-radius: 20px;
+           border-width: 2px;
+           border-color: rgb(170, 170, 170);
+            border-style: solid;
+            display: flex;
+            flex-direction: row;
+           
+           align-items: center;
+        }
+        .plane-box{
+            flex: 1;
+            height: 96px;
+            border-width: 1px;
+          
+            border-style: solid;
+            border: rgb(170, 170, 170);
+            background-color: rgb(172, 172, 172);
+            border-top-left-radius: 17px;
+            border-bottom-left-radius: 17px;
+        }
+        .link{
+            width: 290px;
+        }
+        .yt-link{
+           color: grey; 
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image">
+            <img src="html images/flag.jpg" >
+        </div>
+        <div class="info">
+            <div class="about">
+                <p class="user">supersimple.dev</p>
+                <p class="tag">@SupersimpleDev</p>
+                <p class="txt">What is backend development?A complete overview.New video is up!</p>
+            </div>
+            <div class="link-box">
+                <div class="plane-box"></div>
+                <div class="link">
+                    <p class="yt-link">youtube.com</p>
+                    <p>Backend web development-a complete overview(2021)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
