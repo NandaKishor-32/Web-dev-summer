@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --back:rgb(41, 180, 255);
+        }
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+
+        }
+        .box{
+            width: 100px;
+            aspect-ratio: 1/1;
+            background-color: var(--back);
+            overflow: visible;
+            position: relative;
+        }
+        @property --angle{
+            syntax:"<angle>";
+            inherits:true;
+            initial-value: 0deg;
+        }
+        .box::before{
+            content: "before";
+            background-color:red;
+            position: absolute;
+            width: 100px;
+            aspect-ratio: 1/1;
+            left: 100px;
+            border-radius: inherit;
+            --angle:0deg;
+            background-image: conic-gradient(from var(--angle),white,rgb(8, 8, 146));
+animation: autoRotate 2s linear infinite;
+
+        }
+        @keyframes autoRotate{
+            0%{--angle:0deg;}
+            100%{--angle:360deg;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
